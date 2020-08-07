@@ -6,7 +6,7 @@ This project's sole purpose is getting a grasp on the Swift language and better 
 
 ## Screenshots
 
-![LoadingScreen](https://github.com/nthimothe/Projects/blob/master/TipCalculator/Screenshots/launchScreen.JPG)
+![LoadingScreen](https://github.com/nthimothe/TipCalc/blob/master/Screenshots/launchScreen.JPG)
 
-![MainScreen](https://github.com/nthimothe/Projects/blob/master/TipCalculator/Screenshots/appScreen.JPG)
+![MainScreen](https://github.com/nthimothe/TipCalc/blob/master/Screenshots/appScreen.JPG)
 
