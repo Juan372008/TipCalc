@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -272,12 +273,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="BudgetViewController" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="589-zP-Gew">
+                                <rect key="frame" x="132" y="802" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KJ3-xY-e1e"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="jWN-N6-S5d"/>
+                                    <constraint firstAttribute="width" constant="150" id="mCd-xB-Xoc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Budget">
+                                    <color key="titleColor" red="0.32941176470588235" green="0.7803921568627451" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ka8-6z-yPV" kind="showDetail" identifier="ShowDetail" id="8HZ-p6-WmT"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" systemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="suU-sf-HJd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="0CU-E3-7Ji"/>
                             <constraint firstItem="HPu-zv-agn" firstAttribute="leading" secondItem="R3C-v4-F2o" secondAttribute="leading" id="2B3-it-c7W"/>
+                            <constraint firstItem="589-zP-Gew" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8lT-p0-EZ2"/>
                             <constraint firstItem="R3C-v4-F2o" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="485" id="9MC-Ng-v3g"/>
                             <constraint firstItem="NBW-Hh-VwC" firstAttribute="leading" secondItem="Wyz-QE-QsO" secondAttribute="trailing" constant="22" id="9eZ-zL-OvA"/>
                             <constraint firstItem="XXh-7P-ijH" firstAttribute="trailing" secondItem="tRZ-uA-5dD" secondAttribute="trailing" id="AET-pW-0Pa"/>
@@ -298,6 +317,7 @@
                             <constraint firstItem="HPu-zv-agn" firstAttribute="top" secondItem="XXh-7P-ijH" secondAttribute="top" id="ZWB-aA-86O"/>
                             <constraint firstItem="suU-sf-HJd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="137" id="ZvL-Pa-1qz"/>
                             <constraint firstItem="Wyz-QE-QsO" firstAttribute="leading" secondItem="HPu-zv-agn" secondAttribute="leading" id="chb-fq-rkx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="589-zP-Gew" secondAttribute="bottom" constant="10" id="ct3-fy-Uet"/>
                             <constraint firstItem="suU-sf-HJd" firstAttribute="top" secondItem="Nch-z8-GJN" secondAttribute="bottom" constant="34" id="fYY-2u-x1u"/>
                             <constraint firstItem="HPu-zv-agn" firstAttribute="bottom" secondItem="XXh-7P-ijH" secondAttribute="bottom" id="g67-bS-QEh"/>
                             <constraint firstItem="Wyz-QE-QsO" firstAttribute="top" secondItem="NBW-Hh-VwC" secondAttribute="top" id="gpa-tL-4lC"/>
@@ -313,7 +333,6 @@
                             <constraint firstItem="HPu-zv-agn" firstAttribute="top" secondItem="Wyz-QE-QsO" secondAttribute="bottom" constant="10" id="wW9-8O-BAP"/>
                             <constraint firstItem="tRZ-uA-5dD" firstAttribute="top" secondItem="I0c-RZ-39B" secondAttribute="bottom" constant="15" id="x7X-zd-yJ9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="calculatedTip" destination="mhd-6e-Amf" id="q5J-hP-NiD"/>
@@ -331,5 +350,112 @@
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="102.45535714285714"/>
         </scene>
+        <!--Budget View Controller-->
+        <scene sceneID="T6o-Zh-IYh">
+            <objects>
+                <viewController id="ka8-6z-yPV" customClass="BudgetViewController" customModule="Tip_Calculator" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OTH-Z1-vcG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbX-ma-TNy">
+                                <rect key="frame" x="83" y="30" width="248" height="30"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <color key="textColor" red="0.3294117647" green="0.78039215689999997" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="KO3-gw-Dt2">
+                                <rect key="frame" x="20" y="83" width="374" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-qA-1M5">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-Ua-5Y6">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="34"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrf-3Y-dS1">
+                                                <rect key="frame" x="124.66666666666664" y="0.0" width="249.33333333333337" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="budgetCalculation:forEvent:" destination="ka8-6z-yPV" eventType="editingChanged" id="2PQ-ij-D7X"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yuz-nE-D5i">
+                                        <rect key="frame" x="0.0" y="95" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Expenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQq-bE-ofY">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="34"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Expenses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeS-Ky-dOV">
+                                                <rect key="frame" x="138" y="0.0" width="236" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJ3-9Z-MMf">
+                                        <rect key="frame" x="0.0" y="190" width="374" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fT-3h-gsc">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="34"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Amount left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ1-8A-mNr">
+                                                <rect key="frame" x="112" y="0.0" width="262" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Yuz-nE-D5i" firstAttribute="height" secondItem="ccC-qA-1M5" secondAttribute="height" id="8pD-Ve-Hge"/>
+                                    <constraint firstItem="sJ3-9Z-MMf" firstAttribute="height" secondItem="ccC-qA-1M5" secondAttribute="height" id="nHR-h5-LwB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g5Q-qk-VDn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g5Q-qk-VDn" firstAttribute="trailing" secondItem="KO3-gw-Dt2" secondAttribute="trailing" constant="20" id="41H-tD-JZa"/>
+                            <constraint firstItem="KO3-gw-Dt2" firstAttribute="leading" secondItem="g5Q-qk-VDn" secondAttribute="leading" constant="20" id="5hm-GU-mmG"/>
+                            <constraint firstItem="VbX-ma-TNy" firstAttribute="centerX" secondItem="OTH-Z1-vcG" secondAttribute="centerX" id="XJm-yE-iD7"/>
+                            <constraint firstItem="g5Q-qk-VDn" firstAttribute="trailing" secondItem="KO3-gw-Dt2" secondAttribute="trailing" constant="20" id="btp-Zn-b79"/>
+                            <constraint firstItem="VbX-ma-TNy" firstAttribute="top" secondItem="g5Q-qk-VDn" secondAttribute="top" constant="30" id="dAZ-fk-0zG"/>
+                            <constraint firstItem="KO3-gw-Dt2" firstAttribute="top" secondItem="VbX-ma-TNy" secondAttribute="bottom" constant="23" id="jKl-TC-LI7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zNA-sn-30d"/>
+                    <connections>
+                        <outlet property="amountLeft" destination="QJ1-8A-mNr" id="6fK-gH-nFM"/>
+                        <outlet property="budget" destination="zrf-3Y-dS1" id="KSW-Zh-AQl"/>
+                        <outlet property="expenses" destination="DeS-Ky-dOV" id="y9d-Q3-pwp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVM-UG-VTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="102"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

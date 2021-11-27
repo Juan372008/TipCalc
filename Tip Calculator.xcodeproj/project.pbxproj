@@ -14,6 +14,7 @@
 		4BAC49EE22CC357100FD6CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC49EC22CC357100FD6CC5 /* Main.storyboard */; };
 		4BAC49F022CC357300FD6CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC49EF22CC357300FD6CC5 /* Assets.xcassets */; };
 		4BAC49F322CC357300FD6CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC49F122CC357300FD6CC5 /* LaunchScreen.storyboard */; };
+		F9935BC1274FEBE300CA173C /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9935BC0274FEBE300CA173C /* BudgetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4BAC49EF22CC357300FD6CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BAC49F222CC357300FD6CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BAC49F422CC357300FD6CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9935BC0274FEBE300CA173C /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4BAC49EA22CC357100FD6CC5 /* ViewController.swift */,
 				4BAC49EC22CC357100FD6CC5 /* Main.storyboard */,
 				4B744BCA22CED60F00BFCA96 /* TipCalculator.swift */,
+				F9935BC0274FEBE300CA173C /* BudgetViewController.swift */,
 				4BAC49EF22CC357300FD6CC5 /* Assets.xcassets */,
 				4B744BC822CE7D0B00BFCA96 /* logo.png */,
 				4BAC49F122CC357300FD6CC5 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				4B744BCB22CED60F00BFCA96 /* TipCalculator.swift in Sources */,
 				4BAC49EB22CC357100FD6CC5 /* ViewController.swift in Sources */,
 				4BAC49E922CC357100FD6CC5 /* AppDelegate.swift in Sources */,
+				F9935BC1274FEBE300CA173C /* BudgetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NCHHMXQQ2S;
+				DEVELOPMENT_TEAM = JAXA25M2S3;
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,7 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NCHHMXQQ2S;
+				DEVELOPMENT_TEAM = JAXA25M2S3;
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (

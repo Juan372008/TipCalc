@@ -59,8 +59,23 @@ class ViewController: UIViewController {
         calculatedTip.text = String(format: "$%0.2f%", tipCalculator.tipAmount)
         //splitTip is the tipAmount divided by the number of people, calculated by tip Calculator
         splitTip.text = String(format: "$%0.2f%", (tipCalculator.tipAmount) / Double(numPeople))
+        
     }
+  
+    func transitionToBudget() {
 
+        
+        performSegue(withIdentifier: "ShowDetail", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let Tc = TipCalculator(initialAmount: (initialTotal.text! as NSString).doubleValue, tipPercent: truncate(Double(tipSlide.value)))
+        let total = Tc.totalAmount
+
+        let bvc = segue.destination as! BudgetViewController
+        bvc.total = Int(tipCalculator.totalAmount)
+        print("Total\(total)")
+    }
     // bring up keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         initialTotal.resignFirstResponder()
@@ -90,6 +105,9 @@ class ViewController: UIViewController {
         splitLabel.text = "\(currentV)"
         calculateBill()
     }
+    
+     
+    
     
 }
 

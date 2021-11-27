@@ -26,6 +26,7 @@ class TipCalculator {
         tipAmount = initialAmount * tipPercent
         //tip Amt + initial Amount
         totalAmount = tipAmount + initialAmount
+     
     }
     
 }
